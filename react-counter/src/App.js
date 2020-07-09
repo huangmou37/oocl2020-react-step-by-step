@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <button type="button" onClick={onClickHelloWorld}>Hello world!</button>
-        <label id="label">number: 0</label>
-      </header>
-    </div>
-  );
-}
-
-function onClickHelloWorld() {
-  document.getElementById("label").innerText = 'number: 1';
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {number: props.number};
+  }
+  render() {
+    return (
+        <div className="App">
+          <header className="App-header">
+            <button onClick={() => { this.setState({number: 1}); }}>Hello world!</button>
+            <p>{this.state.number}</p>
+          </header>
+        </div>
+    );
+  }
 }
 
 export default App;
