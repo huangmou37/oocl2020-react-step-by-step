@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -7,14 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <button type="button" onClick={onClickHelloWorld}>Hello world!</button>
-        <label>number: 0</label>
+        <label id="label">number: 0</label>
       </header>
     </div>
   );
 }
 
 function onClickHelloWorld() {
-  alert('now you know how to handle onclick event');
+  document.getElementById("label").innerText = 'number: 1';
 }
 
 export default App;
