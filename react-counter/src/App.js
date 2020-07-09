@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Number from './components/Number';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class App extends React.Component {
               this.setState({number: newNumber});
             }}>Hello world!
             </button>
-            <p>{this.state.number}</p>
+            <p><Number />{this.state.number}</p>
           </header>
         </div>
     );
