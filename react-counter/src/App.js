@@ -6,11 +6,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button type="button">Hello world!</button>
+        <button type="button" onClick={onClickHelloWorld}>Hello world!</button>
         <label>number: 0</label>
       </header>
     </div>
   );
+}
+
+function onClickHelloWorld() {
+  alert('now you know how to handle onclick event');
 }
 
 export default App;
